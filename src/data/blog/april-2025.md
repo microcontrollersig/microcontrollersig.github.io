@@ -1,7 +1,7 @@
 ---
 title: April 2025 Meetings
 description: electronics, CNC, nodered
-pubDatetime: 2025-04-30T00:00:00Z
+pubDatetime: 2025-04-01T00:00:00Z
 ---
 
 # April 2025 Meetings
