@@ -3,9 +3,6 @@ title: April 2025 Meetings
 description: electronics, CNC, nodered
 pubDatetime: 2025-04-01T00:00:00Z
 ---
-
-# April 2025 Meetings
-
 ## April 12
 
 Waveshare esp32 P4 DevKit is interesting piece of kit
