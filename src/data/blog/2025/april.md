@@ -1,6 +1,6 @@
 ---
 title: April 2025 Meetings
-description: electronics, CNC, nodered
+description: waveshare esp32 p4
 pubDatetime: 2025-04-01T00:00:00Z
 ---
 ## April 12
