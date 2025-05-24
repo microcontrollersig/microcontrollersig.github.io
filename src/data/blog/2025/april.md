@@ -10,3 +10,16 @@ Waveshare esp32 P4 DevKit is interesting piece of kit
 ![esp32-p4-dev-kit](https://www.waveshare.com/img/devkit/ESP32-P4-Module-DEV-KIT/ESP32-P4-Module-DEV-KIT-details-1.jpg)
 
 . An esp32 in a raspberry pi form factor. This guy on youtube wants to make his own car dashcams with it [esp32 p4 video](https://www.youtube.com/watch?v=6iZ5jyyye6k)
+
+## April 26
+
+Gus 2.0 uses emotions to indicate room health
+
+![Gus 2.0](/gus20.jpg)
+
+
+More info here:
+
+[Gus 2.0](https://www.instructables.com/Gus-20-Uses-Emotions-to-Indicate-Room-Health/)
+
+
