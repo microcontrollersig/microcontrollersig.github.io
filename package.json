@@ -2,6 +2,12 @@
   "name": "microcontrollersig.github.io",
   "type": "module",
   "version": "0.0.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
+  },
   "engines": {
     "node": ">=22.12.0"
   },
@@ -12,6 +18,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.3.3"
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.3.3",
+    "marked": "^18.0.3",
+    "tailwindcss": "^4.3.0"
   }
 }
