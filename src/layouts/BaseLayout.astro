@@ -15,13 +15,51 @@ const { showHeader = true, ...head } = Astro.props;
 <html lang="en" class="wrap-break-words antialiased">
     <head>
         <BaseHead {...head} />
-        <script>
-            if (localStorage.theme === 'dark') {
+<script is:inline>
+    // Function to apply theme based on localStorage
+    function applyStoredTheme() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else if (theme === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            // Fall back to system preference
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
             }
-        </script>
+        }
+    }
+
+    // Function to toggle theme
+    function toggleTheme() {
+        const isDark = document.documentElement.classList.contains('dark');
+        if (isDark) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    // Apply theme immediately on initial load
+    applyStoredTheme();
+
+    // Set up global click delegation for theme toggle buttons
+    document.addEventListener('click', (e) => {
+        const toggleBtn = e.target.closest('[data-theme-toggle]');
+        if (toggleBtn) {
+            toggleTheme();
+        }
+    });
+
+    // Re-apply stored theme after client-side navigation (ensures class persists)
+    document.addEventListener('astro:after-swap', applyStoredTheme);
+</script>        
         <ClientRouter />
-        <script is:inline src="/theme-toggle.js"></script>
     </head>
     <body class="bg-bg-main text-text-main">
         <div class="flex min-h-screen flex-col px-4 md:px-8">
