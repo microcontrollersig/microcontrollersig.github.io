@@ -12,24 +12,34 @@ seo:
 ---
 
 import { Image } from 'astro:assets';
+import HyperLink from '../../components/HyperLink.astro';
+
 import mousejiggler from '../../assets/images/jiggler.jpg';
+import aldicoffemachine from '../../assets/images/aldi-coffee-machine.jpg';
+import resistor from '../../assets/images/aldi-coffee-machine-resistor.jpg';
+
 
 <Image src={mousejiggler} alt="Mouse jiggler" />
-
 ## Mouse jigglers
-
-
-
-Sean showed mouse jigglers. Handy when you want to stop those pesky screensavers showing when presenting live at a meeting.
-
-
+Sean showed mouse jigglers. 
+Handy when you want to stop those pesky screensavers showing when presenting live at a meeting.
 
 ## Turn image to 3d models
 
-Chris showed online tool [PrintPal](https://printpal.io/text-to-cad)
+Chris showed online tool <HyperLink href="https://printpal.io/text-to-cad">PrintPal</HyperLink>
 
-A nice tool to simplify your 3d models [here](https://myminifactory.github.io/Fast-Quadric-Mesh-Simplification/)
+A nice tool to simplify your 3d models <HyperLink href="https://myminifactory.github.io/Fast-Quadric-Mesh-Simplification/">here</HyperLink>
 
+## Another resistor color code website
 
+<HyperLink href="https://www.ventronchip.com/tool/resistor-color-code-calculator.html">Resistor color code</HyperLink>
 
+## Broken Aldi coffee machine
 
+<Image src={aldicoffemachine} alt="Aldi coffee machine" />
+
+> The problem is never where you think it is
+
+<Image src={resistor} alt="Aldi coffee machine" />
+
+Looks like resistor blown, but there might be component either side of it that is the real culprit.
