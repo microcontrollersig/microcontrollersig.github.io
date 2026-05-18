@@ -2,9 +2,12 @@
 import { defineConfig, fontProviders } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://microcontrollersig.github.io', 
+  site: 'https://microcontrollersig.github.io',
+
   fonts: [
     {
       provider: fontProviders.google(),
@@ -17,8 +20,10 @@ export default defineConfig({
         cssVariable: "--font-newsreader", // Exposes it cleanly to Tailwind/CSS
     },
     ],
-    vite: {
-    plugins: [tailwindcss()],
-    }, 
-   
+
+  vite: {
+  plugins: [tailwindcss()],
+  },
+
+  integrations: [mdx()],
 });

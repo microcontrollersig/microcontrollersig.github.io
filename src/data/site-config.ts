@@ -67,7 +67,7 @@ const siteConfig: SiteConfig = {
     ],
     hero: {
         title: '',
-        text: "Members helping members, interested in all things **Microcontrollers**, **ESP32**, **3D printing and modelling**,**PCB**, **CNC**, **Home Assistant**, **ESPHome** and the rest. Interested?",
+        text: "\"Members helping members\", interested in all things **Microcontrollers**, **ESP32**, **3D printing and modelling**,**PCB**, **CNC**, **Home Assistant**, **ESPHome** and the rest. Interested?",
         image: {
             src: hero,
             alt: 'A person sitting at a desk in front of a computer'
