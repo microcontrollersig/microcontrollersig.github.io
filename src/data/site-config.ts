@@ -21,6 +21,10 @@ const siteConfig: SiteConfig = {
             href: '/'
         },
         {
+            text: 'Meetings',
+            href: '/tags/meeting'  
+        },        
+        {
             text: 'Projects',
             href: '/projects'
         },
