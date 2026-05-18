@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.6",
+    "@astrojs/rss": "^4.0.18",
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.3.3",
     "marked": "^18.0.3",
