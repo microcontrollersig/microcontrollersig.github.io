@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import ArrowRight from '../../assets/icons/arrow-right.svg';
-import Subscribe from '../../components/Subscribe.astro';
+//import Subscribe from '../../components/Subscribe.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getAllTags, getPostsByTag, sortItemsByDateDesc } from '../../utils/data-utils';
 
@@ -39,5 +39,4 @@ const tags = getAllTags(posts).sort((tagA, tagB) => {
             );
         })
     }
-    <Subscribe class="my-16 sm:my-24" />
 </BaseLayout>

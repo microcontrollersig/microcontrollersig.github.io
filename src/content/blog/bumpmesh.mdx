@@ -1,0 +1,45 @@
+---
+title: Add texture to 3d prints using BumpMesh
+excerpt: Bumpmesh and MeshTexture for applying textures of 3d models.
+publishDate: 'May 20 2026'
+isFeatured: true
+tags:
+  - 3d printing
+seo:
+  image:
+    src: '../../assets/images/post-14.jpg'
+    alt: Add texture to 3d prints using BumpMesh
+---
+
+import { Image } from 'astro:assets';
+import HyperLink from '../../components/HyperLink.astro';
+
+import turtle from '../../assets/images/makerworld-turtle.jpg'; 
+import stegosaurus from '../../assets/images/knitted-stegosaurus.jpg';
+
+<Image src={stegosaurus} alt="Knitted stegosaurus" />
+
+BumpMesh.com is a free, browser-based tool developed by CNC Kitchen.
+
+It allows you to add custom textures to 3d models.
+
+The motivation for this was figuring out the based way to create those cute knitted animals like
+you see by MakerWorld creator <HyperLink href="https://makerworld.com/en/@TreeDprints">**TreeDprints**</HyperLink>
+
+<Image src={turtle} alt="Knitted Turtle" />
+
+## References
+<HyperLink href="https://bumpmesh.com/" wrapper='p'>Bumpmesh.com</HyperLink>
+
+<HyperLink href="https://github.com/CNCKitchen/stlTexturizer" wrapper='div'>Bumpmesh.com source code on github</HyperLink>
+
+
+## See also
+
+<HyperLink href="https://meshtexture.com/" wrapper='p'>MeshTexture</HyperLink>
+
+<HyperLink href="https://github.com/feridun35/MeshTexture" wrapper='p'>Bumpmesh.com source code on github</HyperLink>
+
+<HyperLink href="https://www.ideamaker.io/texture.html" wrapper='div'>Textures</HyperLink>
+
+
