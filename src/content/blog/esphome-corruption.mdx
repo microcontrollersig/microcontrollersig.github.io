@@ -13,6 +13,11 @@ seo:
 ---
 
 import HyperLink from '../../components/HyperLink.astro';
+import Tip from '../../components/Tip.astro';
+
+This guide this for installing esptool and esphome using uv python package and library manager
+
+If you don't want to install uv (because you want keep your python install), then this guide is NOT for you.
 
 Here are steps to follow when can't upload ESPHome to your esp32.
 
@@ -24,34 +29,45 @@ Here are steps to follow when can't upload ESPHome to your esp32.
 python --version
 ```
 
-### List python packages/libraries installed
+### If python is not installed
+
+Two options, install python manually, or use **uv**
+
+This guide only shows you how to install python using uv.
+
+Install uv: https://docs.astral.sh/uv/getting-started/installation/
+
+### OK, I've installed uv, now what
 
 ```sh
-python -m pip list
+uv tool install esptool
+uv tool install esphome --with fatfs-ng --with littlefs-python --with pip --with wheel
 ```
 
-note if esphome and esptool are installed and what their version numbers are.
-
-### Install/update esphome and esptool cli
+To check what is installed:
 
 ```sh
-python -m pip install esptool esphome
+uv tool list
 ```
 
-you can confirm install by re-running:
+### Make python version default
 
 ```sh
-python -m pip list
+uv python pin --global 3.14
 ```
 
-1. the official package manager for downloading libraries is: **pip**.
-1. the official registry/place where it downloads libraries from is: **pypi**.
-1. link to esptool pypi page <HyperLink href="https://pypi.org/project/esptool">here</HyperLink> 
-1. link to esphome pypi page <HyperLink href="https://pypi.org/project/esphome">here</HyperLink> 
+Also check order of python in your PATH:
+
+On windows CMD:
+
+```sh
+where.exe python
+```
 
 
-
-
+<Tip>
+<h3>Python Libraries</h3> <p>Official python manager for downloading libraries is called **pip**, and the official registry for libraries is **pypi** . The pypi page for esptool is <HyperLink href="https://pypi.org/project/esptool">here</HyperLink>  and esphome is <HyperLink href="https://pypi.org/project/esphome">here</HyperLink></p>
+</Tip>
 ## EXECUTIVE SUMMARY OF PROCEDURE
 
 ### Erase Flash 
