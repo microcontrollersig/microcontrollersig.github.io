@@ -1,0 +1,25 @@
+{
+  "Astro Frontmatter": {
+    "prefix": "frontmatter",
+    "body": [
+      "---",
+      "title: '${1}'",
+      "excerpt: ${2} and the rest",
+      "publishDate: '${3:Jun 06 2026}'",
+      "tags:",
+      "  - meeting",
+      "isFeatured: true",
+      "seo:",
+      "  image:",
+      "    src: '${6:../../assets/images/ledmatrix.jpg}'",
+      "    alt: '${7:LED Matrix}'",
+      "---",
+      "",
+      "import HyperLink from '../../components/HyperLink.astro';",
+      "import { Image } from 'astro:assets';",
+      "",
+      "$0"
+    ],
+    "description": "Inserts Astro YAML frontmatter with SEO and common imports"
+  }
+}
